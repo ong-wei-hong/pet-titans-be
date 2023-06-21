@@ -6,7 +6,7 @@ const router = express.Router();
 
 // GET /users/
 router.get("/", async(req, res) => {
-	let collection = await db.collection("users");
+	let collection = await db.collection("quest");
 	let results = await collection.find({}).toArray();
 
 	res.send(results).status(200);
@@ -14,7 +14,7 @@ router.get("/", async(req, res) => {
 
 // GET /users/:id
 router.get("/:id", async(req, res) => {
-	let collection = await db.collection("users");
+	let collection = await db.collection("quest");
 	let results = await collection.findOne({ "_id": new ObjectId(req.params.id) });
 	
 

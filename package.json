@@ -13,7 +13,7 @@
     "nodemon": "^2.0.22"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
 	"type": "module"
 }
