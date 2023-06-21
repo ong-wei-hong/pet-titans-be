@@ -8,7 +8,6 @@ const router = express.Router();
 router.get("/", async(req, res) => {
 	let collection = await db.collection("users");
 	let results = await collection.find({}).toArray();
-
 	res.send(results).status(200);
 })
 
@@ -20,6 +19,5 @@ router.get("/:id", async(req, res) => {
 
 	res.send(results).status(200);
 })
-
 
 export default router
